@@ -1,51 +1,15 @@
+import { HightlightsCardProps } from "../../types";
 
-export const WindstatusCard = () => {
+const hightlightsCard = ({value:{unit,value},title}:HightlightsCardProps) => {
   return (
-    <div className="hightlightcardStyle">
+    <div className="hightlightcardStyle ">
       <div>
-        <h1 className="text-xl">Windstatus</h1>
+        <h1 className="text-xl">{title}</h1>
       </div>
       <div>
-        <p className="text-[64px]">7mph</p>
+        <p className="text-[64px]">{value} {unit}</p>
       </div>
     </div>
   );
 }
-export const HumiditystatusCard = () => {
-      return (
-        <div className="hightlightcardStyle">
-          <div>
-            <h1 className="text-xl">Humidity</h1>
-          </div>
-          <div>
-            <p className="text-[64px]">78%</p>
-          </div>
-        </div>
-      );
-}
-
-export const VisibilitystatusCard = () => {
-      return (
-        <div className="hightlightcardStyle">
-          <div>
-            <h1 className="text-xl">Visiblity</h1>
-          </div>
-          <div>
-            <p className="text-[64px]">10000m</p>
-          </div>
-        </div>
-      );
-}
-
-export const AirPressureCard = () => {
-      return (
-        <div className="hightlightcardStyle">
-          <div>
-            <h1 className="text-xl">Visiblity</h1>
-          </div>
-          <div>
-            <p className="text-[64px]">1017hPa</p>
-          </div>
-        </div>
-      );
-}
+export  default hightlightsCard
